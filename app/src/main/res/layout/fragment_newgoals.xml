@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/goalTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Holo.Spinner"/>
+
+        <TextView
+            android:id="@+id/dateTextView2"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Holo.Spinner"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="120sp">
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:paddingBottom="100sp" />
+    </ScrollView>
+
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:text="Public" />
+
+    <GridLayout
+        android:id="@+id/categoriesIcons"
+        android:rowCount="3"
+        android:columnCount="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:src="@drawable/boxing_96px_1"
+            android:maxHeight="25sp"
+            android:maxWidth="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="boxing"
+
+            />
+
+        <ImageView
+            android:src="@drawable/crown_96px_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="25sp"
+            android:maxWidth="25sp"
+            android:tag="chess"
+
+            />
+
+        <ImageView
+            android:src="@drawable/dj_96px_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="25sp"
+            android:maxWidth="25sp"
+            android:tag="deejay"
+
+            />
+
+        <ImageView
+            android:src="@drawable/graduationcap_96px_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="25sp"
+            android:maxWidth="25sp"
+            android:tag="studying"
+
+            />
+
+        <ImageView
+            android:src="@drawable/hearthealth_96px_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="25sp"
+            android:maxWidth="25sp"
+            android:tag="cardio"
+
+            />
+
+        <ImageView
+            android:src="@drawable/stocks_96px_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="25sp"
+            android:maxWidth="25sp"
+            android:tag="stocks"
+
+            />
+
+        <ImageView
+            android:src="@drawable/veganfood_96px_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="25sp"
+            android:maxWidth="25sp"
+            android:tag="healthy eating"
+            />
+
+        <ImageView
+            android:src="@drawable/xml_96px_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="25sp"
+            android:maxWidth="25sp"
+            android:tag="programming"
+            />
+
+    </GridLayout>
+</LinearLayout>
