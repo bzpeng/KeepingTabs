@@ -20,8 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ActivityFragment"
-            android:windowSoftInputMode="adjustPan"
-            />
+            android:windowSoftInputMode="adjustPan"/>
+            <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar"-->
+
     </application>
 
 </manifest>

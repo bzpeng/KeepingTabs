@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "414906261811",
+    "firebase_url": "https://keepingtabs-b8220.firebaseio.com",
+    "project_id": "keepingtabs-b8220",
+    "storage_bucket": "keepingtabs-b8220.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414906261811:android:a66dfe345a2db446",
+        "android_client_info": {
+          "package_name": "com.imp.beezy.keepingtabs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414906261811-f34mp833v02ft0pm7aogl2aolokcfcc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtUs8gK-Ko7ThDiT--UHVpJPX3eLVfHjo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

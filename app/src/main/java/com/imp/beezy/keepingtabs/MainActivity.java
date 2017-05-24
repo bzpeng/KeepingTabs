@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         new_goal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "New Goal", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "New Goal", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), ActivityFragment.class);
                 intent.putExtra("Type", "newgoal");
                 startActivity(intent);
