@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "414906261811-ntjrg5qt15meu2ra0v08rr48571kbn10.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.imp.beezy.keepingtabs",
+            "certificate_hash": "be2abca873a24d27d1a11ac842b3f0bf7caf148c"
+          }
+        },
+        {
           "client_id": "414906261811-f34mp833v02ft0pm7aogl2aolokcfcc2.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414906261811-f34mp833v02ft0pm7aogl2aolokcfcc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
