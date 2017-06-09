@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -29,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -74,6 +76,7 @@ public class newGoalFragment extends Fragment implements View.OnClickListener {
 
         if(id == R.id.action_addGoal) {
             createGoal();
+            getActivity().onBackPressed();
             //Toast.makeText(getApplicationContext(), et.getText().toString(), Toast.LENGTH_SHORT).show();
         }
         return true;
@@ -106,7 +109,7 @@ public class newGoalFragment extends Fragment implements View.OnClickListener {
         TextView tv2 = (TextView) rootView.findViewById(R.id.dateTextView2);
         endDate = tv2.getText().toString();
 
-        Switch sw = (Switch)rootView.findViewById(R.id.accessSwitch);
+        Switch sw = (Switch) rootView.findViewById(R.id.accessSwitch);
         access = sw.isChecked();
 
         GridLayout icons = (GridLayout) rootView.findViewById(R.id.categoriesIcons);
@@ -122,7 +125,14 @@ public class newGoalFragment extends Fragment implements View.OnClickListener {
         }
 
         Map<String, Object> temp = new HashMap<>();
-        db.child("Goals").setValue(new Goal(goalName, startDate, endDate, goalDescription, access, map));
+
+        //Generating unique key
+        //String key = db.child("Goals").push().getKey();
+        try {
+            db.child("Goals").child(goalName).setValue(new Goal(goalName, startDate, endDate, goalDescription, access, map));
+        } catch (Throwable throwable) {
+            String err = throwable.getLocalizedMessage();
+        }
     }
 
     @Override

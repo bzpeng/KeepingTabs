@@ -42,7 +42,8 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <!-- Your FAB implementation -->
@@ -87,7 +88,7 @@
 
                 <!-- Reminder -->
                 <TextView
-                    android:id="@+id/fab_sheet_item_reminder"
+                    android:id="@+id/fab_sheet_item_testCard"
                     style="@style/TextAppearance.MaterialSheetFab.Sheet.Item"
                     android:drawableLeft="@drawable/ic_access_alarms_grey600_24dp"
                     android:drawableStart="@drawable/ic_access_alarms_grey600_24dp"

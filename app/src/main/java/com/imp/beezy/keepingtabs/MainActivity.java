@@ -53,12 +53,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), getApplicationContext());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        mViewPager.setCurrentItem(1);
+        mViewPager.setCurrentItem(0);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
@@ -86,6 +86,17 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("Type", "newgoal");
                 startActivity(intent);
 
+            }
+        });
+
+        //Test RecyclerView+CardView
+        TextView new_card = (TextView) findViewById(R.id.fab_sheet_item_testCard);
+        new_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ActivityFragment.class);
+                intent.putExtra("Type", "testCard");
+                startActivity(intent);
             }
         });
 

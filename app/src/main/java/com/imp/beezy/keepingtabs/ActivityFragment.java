@@ -34,9 +34,9 @@ public class ActivityFragment extends AppCompatActivity {
         setContentView(R.layout.activity_fragment);
 //
         String fragmentType = getIntent().getStringExtra("Type");
+        FragmentManager fm = getSupportFragmentManager();
 
         if (fragmentType.equals("newgoal")) {
-            FragmentManager fm = getSupportFragmentManager();
             fragment = newGoalFragment.newInstance();
             fm.beginTransaction().add(fragment, "newGoal")
                     .commit();
