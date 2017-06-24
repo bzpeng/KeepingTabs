@@ -43,6 +43,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class newGoalFragment extends Fragment implements View.OnClickListener {
 
@@ -90,8 +91,12 @@ public class newGoalFragment extends Fragment implements View.OnClickListener {
     }
 
     public void createGoal() {
+        // Setting up Firebase
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        // Enabling offline capabilities
         DatabaseReference db = database.getReference().getRoot();
+
 
         EditText ET = (EditText) rootView.findViewById(R.id.goalTitle);
         goalName = ET.getText().toString();
@@ -130,6 +135,7 @@ public class newGoalFragment extends Fragment implements View.OnClickListener {
         //String key = db.child("Goals").push().getKey();
         try {
             db.child("Goals").child(goalName).setValue(new Goal(goalName, startDate, endDate, goalDescription, access, map));
+
         } catch (Throwable throwable) {
             String err = throwable.getLocalizedMessage();
         }

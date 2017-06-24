@@ -1,6 +1,7 @@
 package com.imp.beezy.keepingtabs;
 
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * Created by bpeng on 2017-05-09.
@@ -16,6 +17,14 @@ public class Goal {
     private boolean access;
     private Map<String, Boolean> typeMap;
 
+    @Override
+    public boolean equals(Object obj) {
+        Goal goal = (Goal) obj;
+        if(this.goalName == ((Goal) obj).goalName) {
+            return true;
+        }
+        return false;
+    }
 
     public String getGoalName() {
         return goalName;
@@ -64,6 +73,7 @@ public class Goal {
     public void setTypeMap(Map<String, Boolean> typeMap) {
         this.typeMap = typeMap;
     }
+
 
     public Goal () {}
 
